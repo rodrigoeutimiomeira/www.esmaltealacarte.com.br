@@ -163,3 +163,23 @@ footer {
 .social-icons img:hover {
     opacity: 0.7; /* Efeito hover para os ícones sociais */
 }
+
+/* Estilo padrão do cursor para links e botões */
+a, button {
+    cursor: pointer; /* Cursor em forma de dedo */
+}
+
+/* Adicionando cursor de dedo para imagens clicáveis (se aplicável) */
+.gallery-images img {
+    cursor: pointer; /* Cursor em forma de dedo ao passar sobre imagens */
+}
+
+/* Adicionando cursor de dedo ao passar sobre a área de serviços e produtos, se necessário */
+.product-item, .service-item {
+    cursor: pointer; /* Cursor em forma de dedo ao passar sobre itens de produto e serviço */
+}
+
+/* Estilo adicional para o botão de envio do formulário */
+form button {
+    cursor: pointer; /* Cursor em forma de dedo ao passar sobre o botão */
+}
