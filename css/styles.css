@@ -3,12 +3,12 @@ body {
     margin: 0;
     padding: 0;
     color: var(--text-color);
-    overflow-x: hidden; /* Permite rolagem horizontal se necessário */
-    overflow-y: auto; /* Garante rolagem vertical */
+    overflow-x: hidden; /* Desativa a rolagem horizontal */
+    overflow-y: hidden; /* Desativa a rolagem vertical */
 }
 
 .background-video {
-    position: absolute;
+    position: fixed; /* Mantém o vídeo fixo no fundo */
     top: 0;
     left: 0;
     width: 100%;
@@ -146,33 +146,3 @@ form button {
 }
 
 form button:hover {
-    background-color: #b36f6f;
-}
-
-footer {
-    background: rgba(255, 255, 255, 0.8); /* Fundo branco semi-transparente */
-    padding: 10px 20px;
-    text-align: center;
-    border-top: 2px solid #e1e1e1;
-}
-
-.social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.social-icons img {
-    width: 24px;
-    height: 24px;
-    transition: opacity 0.3s;
-}
-
-.social-icons img:hover {
-    opacity: 0.7; /* Efeito hover para os ícones sociais */
-}
-
-/* Estilo padrão do cursor para links e botões */
-a, button {
-    cursor: pointer; /* Cursor em forma de dedo */
-}
