@@ -6,24 +6,37 @@
     <title>Esmalte à La Carte</title>
     <link rel="stylesheet" href="css/styles.css">
     <style>
-        /* CSS para o gradiente animado */
+        /* CSS para o vídeo de fundo */
         body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(45deg, #f8b4b4, #f48c8c, #f06292, #c2185b);
-            background-size: 400% 400%;
-            animation: gradientAnimation 10s ease infinite;
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Evita barras de rolagem */
             color: var(--text-color);
         }
+        
+        .background-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Faz o vídeo cobrir toda a tela */
+            z-index: -1; /* Coloca o vídeo atrás do conteúdo */
+        }
 
-        @keyframes gradientAnimation {
-            0% { background-position: 0% 0%; }
-            50% { background-position: 100% 100%; }
-            100% { background-position: 0% 0%; }
+        header, main, footer {
+            position: relative; /* Garante que o conteúdo esteja sobre o vídeo */
+            z-index: 1;
         }
     </style>
 </head>
-
 <body>
+    <!-- Vídeo de fundo -->
+    <video class="background-video" autoplay muted loop>
+        <source src="video-background.mp4" type="video/mp4">
+        Seu navegador não suporta a tag de vídeo.
+    </video>
+
     <header>
         <div class="logo">
             <h1>Esmalte à La Carte</h1>
