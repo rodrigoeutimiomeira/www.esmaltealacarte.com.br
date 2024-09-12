@@ -1,3 +1,13 @@
+/* Variáveis CSS */
+:root {
+    --primary-color: #f48c8c; /* Rosa Médio */
+    --secondary-color: #f06292; /* Rosa Escuro */
+    --highlight-color: #c2185b; /* Rosa Intenso */
+    --light-background: #f8b4b4; /* Rosa Claro */
+    --border-color: #e1e1e1; /* Cinza Claro */
+    --text-color: #333; /* Cor do texto */
+}
+
 /* Reseta margens e paddings */
 * {
     margin: 0;
@@ -7,13 +17,13 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f9f9f9; /* Fundo claro */
-    color: #333;
+    background-color: var(--light-background); /* Fundo rosa claro */
+    color: var(--text-color);
 }
 
 header {
-    background: #fff; /* Fundo branco */
-    border-bottom: 2px solid #e1e1e1;
+    background: var(--background-color);
+    border-bottom: 2px solid var(--border-color);
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
@@ -22,7 +32,7 @@ header {
 
 .logo h1 {
     font-size: 24px;
-    color: #d19a7f; /* Cor dourada para o tema */
+    color: var(--highlight-color); /* Rosa Intenso */
 }
 
 nav ul {
@@ -33,13 +43,18 @@ nav ul {
 
 nav a {
     text-decoration: none;
-    color: #d19a7f;
+    color: var(--primary-color); /* Rosa Médio */
     font-weight: bold;
     transition: color 0.3s;
 }
 
 nav a:hover {
-    color: #b36f6f; /* Efeito hover para o menu */
+    color: var(--secondary-color); /* Rosa Escuro */
+}
+
+a:focus, button:focus {
+    outline: 2px solid var(--highlight-color); /* Rosa Intenso */
+    outline-offset: 4px;
 }
 
 main {
@@ -47,8 +62,8 @@ main {
 }
 
 .hero {
-    background: #fff;
-    border: 1px solid #e1e1e1;
+    background: var(--background-color);
+    border: 1px solid var(--border-color);
     padding: 20px;
     border-radius: 10px;
     text-align: center;
@@ -56,7 +71,7 @@ main {
 }
 
 .hero h2 {
-    color: #d19a7f;
+    color: var(--highlight-color); /* Rosa Intenso */
 }
 
 .gallery {
@@ -79,11 +94,12 @@ main {
 .gallery-images img:hover {
     transform: scale(1.05); /* Efeito hover para as imagens */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer; /* Cursor de dedo para imagens clicáveis */
 }
 
 .products, .services, .testimonials, .contact {
-    background: rgba(255, 255, 255, 0.8); /* Sobreposição com efeito de página de papel */
-    border: 1px solid #e1e1e1;
+    background: var(--background-color);
+    border: 1px solid var(--border-color);
     padding: 20px;
     border-radius: 10px;
     margin-bottom: 20px;
@@ -97,8 +113,8 @@ main {
 
 .product-item, .service-item, .testimonial-item {
     flex: 1 1 calc(50% - 20px);
-    background: #fff;
-    border: 1px solid #e1e1e1;
+    background: #fff; /* Fundo branco para itens */
+    border: 1px solid var(--border-color);
     border-radius: 5px;
     padding: 10px;
 }
@@ -122,14 +138,14 @@ form label {
 form input, form textarea {
     padding: 10px;
     margin-top: 5px;
-    border: 1px solid #e1e1e1;
+    border: 1px solid var(--border-color);
     border-radius: 5px;
 }
 
 form button {
     margin-top: 10px;
     padding: 10px;
-    background-color: #d19a7f;
+    background-color: var(--primary-color); /* Rosa Médio */
     border: none;
     color: #fff;
     border-radius: 5px;
@@ -138,14 +154,14 @@ form button {
 }
 
 form button:hover {
-    background-color: #b36f6f;
+    background-color: var(--secondary-color); /* Rosa Escuro */
 }
 
 footer {
-    background: #fff;
+    background: var(--background-color);
     padding: 10px 20px;
     text-align: center;
-    border-top: 2px solid #e1e1e1;
+    border-top: 2px solid var(--border-color);
 }
 
 .social-icons {
