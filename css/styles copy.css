@@ -2,8 +2,8 @@
 body {
     margin: 0;
     padding: 0;
+    overflow: hidden; /* Evita barras de rolagem */
     color: var(--text-color);
-    overflow-x: hidden; /* Permite rolagem horizontal se necessário, mas impede rolagem horizontal */
 }
 
 .background-video {
