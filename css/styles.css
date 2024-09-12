@@ -3,8 +3,7 @@ body {
     margin: 0;
     padding: 0;
     color: var(--text-color);
-    overflow-x: hidden; /* Desativa a rolagem horizontal */
-    overflow-y: hidden; /* Desativa a rolagem vertical */
+   
 }
 
 .background-video {
